@@ -1,0 +1,29 @@
+{
+  "name": "where-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^2.13.10",
+    "koa-router": "^7.3.0",
+    "mongoose": "^4.13.5",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "server": "nodemon src/server/server.js",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "koa": "^2.4.1",
+    "nodemon": "^1.12.1"
+  }
+}
