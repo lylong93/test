@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-
+import Footer from '../../Components/Footer';
 class Find extends Component {
     render() {
         return (
-            <div>find</div>
+            <div>find
+                <Footer/>
+            </div>
         )
     }
 }
