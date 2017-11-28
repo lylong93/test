@@ -5,7 +5,8 @@ import './index.css';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 
-import Login from './Containers/Login'
+import Entran from './Containers/Entran'
+import Register from './Containers/Register'
 import Find from './Containers/Find'
 import Talk from './Containers/Talk'
 import User from './Containers/User'
@@ -20,7 +21,9 @@ ReactDOM.render(
                 <Route path='/Talk' component={Talk}></Route>
                 <Route path='/Find' component={Find}></Route>
                 <Route path='/User' component={User}></Route>
-                <Route path='/login' component={Login}></Route>
+                <Route path='/login' component={Entran}></Route>
+                <Route path='/register' component={Register}></Route>
+
             </Switch>
         </div>
     </BrowserRouter>,

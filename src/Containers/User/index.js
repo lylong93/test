@@ -8,8 +8,9 @@ class User extends Component {
     render() {
         return (
             <div>
-                <div className="ok">
+                <div className="avatar-wrapper">
                     <Avatar size="large">USER</Avatar>
+
                 </div>
                 <Menu theme="dark">
                     <Menu.Item>
