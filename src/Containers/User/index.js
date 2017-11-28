@@ -8,7 +8,7 @@ class User extends Component {
     render() {
         return (
             <div>
-                <div className="i">
+                <div className="ok">
                     <Avatar size="large">USER</Avatar>
                 </div>
                 <Menu theme="dark">
