@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux';
+import user from '../../redux/actions'
 import { Form, Icon, Input, Button } from 'antd';
 const FormItem = Form.Item;
 
@@ -7,14 +10,6 @@ function hasErrors(fieldsError) {
 }
 
 class HorizontalLoginForm extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            user: '',
-            pwd: '',
-            repeatpwd: '',
-        }
-    }
     componentDidMount() {
         this.props.form.validateFields();
     }
@@ -22,9 +17,11 @@ class HorizontalLoginForm extends Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
+                console.log(values);
+                this.props.test(values)
             }
         });
+
     }
     render() {
         const {getFieldDecorator, getFieldsError, getFieldError, isFieldTouched} = this.props.form;
@@ -76,7 +73,19 @@ class HorizontalLoginForm extends Component {
         );
     }
 }
+const _Login = Form.create()(HorizontalLoginForm);
+function mapStateToProps(argument) {
+    return {
 
-const Login = Form.create()(HorizontalLoginForm);
-
+    }
+}
+function mapDispatchToProps(dispath) {
+    return {
+        test: bindActionCreators(user, dispath)
+    }
+}
+const Login = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(_Login)
 export default Login

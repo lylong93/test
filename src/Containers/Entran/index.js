@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import { Tabs, Icon } from 'antd';
+import { Tabs, Icon, Button } from 'antd';
 
 import Login from '../Login'
 import Register from '../Register'
+import LoginMid from '../LoginMid'
+
 const TabPane = Tabs.TabPane;
 
 class Entran extends Component {
-    render() {
-        function ok() {
-            console.log('ok')
+    constructor(props) {
+        super(props);
+        this.state = {
+            key: '1',
         }
+    }
+    render() {
         return (
-            <div>         
+            <div>
+                <LoginMid></LoginMid>     
                 <Tabs>
                     <TabPane tab={<span><Icon type="apple" />Tab 1</span>} key="1">
                       <Login/>
