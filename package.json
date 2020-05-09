@@ -96,7 +96,7 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "axios": "^0.17.1",
+    "axios": "^0.19.2",
     "babel-plugin-import": "^1.6.2",
     "node-sass": "^4.7.2",
     "react-app-rewire-less": "^2.1.0",
